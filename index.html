@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PDGMSC27</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="glow" id="glow" aria-hidden="true"></div>
+
+<main>
+
+  <!-- PAGE 1: countdown -->
+  <section class="count panel" data-panel aria-labelledby="count-h">
+    <div class="wall" id="wall" aria-hidden="true"></div>
+    <div class="pulse" id="pulse" aria-hidden="true"></div>
+    <div class="wrap fx">
+      <div class="bar mono">
+        <span id="count-h">Paradigm Youth _ _ _ _</span>
+        <a href="#spot" data-register>Save your spot</a>
+      </div>
+
+      <div class="count__center">
+        <div class="count__big" id="big">
+          <span class="count__num" id="cNum">--</span>
+          <button class="unit" id="cUnit" type="button" aria-label="Showing hours. Change the unit.">
+            <span class="mask" id="unitMask"><span id="unitW">HOURS</span></span>
+          </button>
+        </div>
+        <p class="count__msg" id="cMsg" hidden></p>
+        <dl class="ticks" id="ticks" role="timer" aria-label="Time until camp starts">
+          <div><dt class="mono">Days</dt><dd id="tD">--</dd></div>
+          <div><dt class="mono">Hours</dt><dd id="tH">--</dd></div>
+          <div><dt class="mono">Minutes</dt><dd id="tM">--</dd></div>
+          <div><dt class="mono">Seconds</dt><dd id="tS">--</dd></div>
+        </dl>
+        <p class="sr-only" id="srCount" aria-live="off"></p>
+      </div>
+    </div>
+    <button class="scrollcue mono" id="cue" type="button" aria-label="Scroll down">Scroll <i>↓</i></button>
+  </section>
+
+  <!-- PAGE 2: the reveal in the centre, dates beneath -->
+  <section class="hero panel" data-panel id="top" aria-label="January 20 to 23">
+    <div class="ghost" id="ghost" aria-hidden="true">27</div>
+    <div class="wrap fx">
+      <div class="bar mono">
+        <span>Paradigm Youth _ _ _ _</span>
+        <a href="#spot" data-register>Save your spot</a>
+      </div>
+
+      <div class="hero__main">
+        <div class="hero__top">
+          <div class="hint mono" aria-hidden="true">
+            <span class="hint__dot"></span>
+            <span><span class="f">Hover over the words</span><span class="t">Tap the words</span></span>
+          </div>
+        </div>
+
+        <button class="date" id="date" type="button" aria-pressed="false" aria-label="The wait is almost over. Reveal what is coming.">
+          <span class="a" aria-hidden="true" data-split>The wait is almost over</span>
+          <span class="b" aria-hidden="true" data-split>SUMMER CAMP 2027</span>
+        </button>
+        <span class="sr-only">Paradigm Youth Camp runs January 20 to 23, 2027.</span>
+
+        <div class="hero__bottom">
+          <h1 class="h1" id="h1" aria-label="January 20 to 23">
+            <span class="line" aria-hidden="true" data-chars>JANUARY</span>
+            <span class="line line--2" aria-hidden="true" data-chars>20–23</span>
+          </h1>
+          <p class="support" id="support" data-final="PARADIGM YOUTH CAMP. Be there.">PARADIGM YOUTH CAMP. BE THERE.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track" id="track"></div>
+    </div>
+  </section>
+
+  <!-- COMMENTED OUT FOR NOW: when / where / who / how much
+       To bring it back: uncomment, and add four more <i></i> to the pips span at the bottom of the page.
+
+  <section class="ask" data-panel aria-labelledby="ask-h">
+    <div class="wrap">
+      <div class="ask__head mono">
+        <span id="ask-h" style="color:var(--mist)">Poke around</span>
+        <span style="color:var(--mist)">Four questions. Four answers.</span>
+      </div>
+      <ul class="rows">
+        <li><button class="row" type="button" aria-pressed="false" data-key="when">
+          <span class="mask"><span class="layer lq">When?</span><span class="layer la" data-ans>Jan 20–23, 2027.</span></span>
+          <span class="cue mono" aria-hidden="true"><span class="f">Hover</span><span class="t">Tap</span><i>↘</i></span>
+        </button></li>
+        <li><button class="row" type="button" aria-pressed="false" data-key="where">
+          <span class="mask"><span class="layer lq">Where?</span><span class="layer la" data-ans>Soon. Stay close.</span></span>
+          <span class="cue mono" aria-hidden="true"><span class="f">Hover</span><span class="t">Tap</span><i>↘</i></span>
+        </button></li>
+        <li><button class="row" type="button" aria-pressed="false" data-key="who">
+          <span class="mask"><span class="layer lq">Who?</span><span class="layer la" data-ans>You. And your people.</span></span>
+          <span class="cue mono" aria-hidden="true"><span class="f">Hover</span><span class="t">Tap</span><i>↘</i></span>
+        </button></li>
+        <li><button class="row" type="button" aria-pressed="false" data-key="cost">
+          <span class="mask"><span class="layer lq">How much?</span><span class="layer la" data-ans>We’ll share it soon.</span></span>
+          <span class="cue mono" aria-hidden="true"><span class="f">Hover</span><span class="t">Tap</span><i>↘</i></span>
+        </button></li>
+      </ul>
+    </div>
+  </section>
+  -->
+
+  <!-- PAGE 3: save your spot -->
+  <section class="spot" data-panel id="spot" aria-labelledby="spot-h">
+    <div class="wrap spot__grid">
+      <div>
+        <p class="eyebrow mono">January 20–23, 2027</p>
+        <h2 class="spot__h" id="spot-h">Save your spot.</h2>
+        <p class="spot__p" id="spotP">Sign up soon. Bring your people.</p>
+        <p class="spot__note" id="regNote" role="status" hidden>Sign-up opens soon. Check back here.</p>
+      </div>
+      <div class="orbwrap" id="orbwrap">
+        <a class="orb" id="orb" href="#spot" data-register>Save your <span>spot →</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap mono">
+    <span>Paradigm Youth _ _ _ _</span>
+    <span>January 20–23, 2027</span>
+  </div>
+</footer>
+
+<div class="found mono" id="found" role="status" aria-live="polite">
+  <span class="pips" id="pips" aria-hidden="true"><i></i><i></i></span>
+  <span id="foundTxt">Found 0 of 2</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
